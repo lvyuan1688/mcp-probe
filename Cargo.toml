@@ -1,0 +1,21 @@
+[package]
+name = "mcp-probe"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "A curl for MCP servers: ping, list tools, call them, inspect wire format."
+homepage = "https://github.com/lvyuan1688/mcp-probe"
+repository = "https://github.com/lvyuan1688/mcp-probe"
+keywords = ["mcp", "model-context-protocol", "debug", "cli"]
+categories = ["development-tools", "command-line-utilities"]
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+
+[[bin]]
+name = "mcp-probe"
+path = "src/main.rs"
